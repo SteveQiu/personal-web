@@ -26,18 +26,21 @@
 </script>
 
 <div>
-	<button class="bnav" onclick="loadContent('home.php')" id="bHome">Home</button>
-	<button class="bnav" onclick="loadContent('skill.php')" id="bRes">Skill</button>
-	<button class="bnav" onclick="loadContent('project.php')" id="bProject">Project</button>
-	<button class="bnav" onclick="loadContent('contact.php')" id="bContact">Contact</button>
-	<button class="bnav" onclick="loadContent('more.php')" id="bMore">Comments</button>
+	<button class="bnav" onclick="loadContent('home')" id="bHome">Home</button>
+	<button class="bnav" onclick="loadContent('skill')" id="bRes">Skill</button>
+	<button class="bnav" onclick="loadContent('project')" id="bProject">Project</button>
+	<button class="bnav" onclick="loadContent('contact')" id="bContact">Contact</button>
+	<button class="bnav" onclick="loadContent('more')" id="bMore">Comments</button>
 </div>
 <hr>
 <button class ="toTop" id="toTop" onclick="goToTop()"><strong>TOP</strong></button>
 <div class ="content" id="content">
-	<?php
-			include_once("home.php");
- 	?>
+	<div class="label" align="center">
+    <p class="homeWelcome"><font face="times" color="white" size="24">Welcome to Steve's Website</font></p>
+    <div class="homeDiv" align="center">
+      <img src="image/thunderbird.jpg">
+    </div>
+  </div>
 </div>
 </body>
 </html>
