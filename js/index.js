@@ -14,7 +14,7 @@ function loadContent(str) {
             FB.XFBML.parse();
         }
     };
-    xmlhttp.open("GET", str+extension, true);
+    xmlhttp.open("GET", str + extension, true);
     xmlhttp.send();
 
     return false;
@@ -25,58 +25,18 @@ function goToTop() {
 }
 
 $(document).ready(function () {
-    $("#bHome").hover(
-        function () {
-            $("#bHome").css("background-color", "#FFD700");
-        },
-        function () {
-            $("#bHome").css("background-color", "white");
-        }
-    );
-});
+    ["#bHome", "#bRes", "#bProject", "#bContact", "#bMore"].forEach(function (ref) {
+        $(ref).hover(
+            function () {
+                $(ref).css("background-color", "#FFD700");
+            },
+            function () {
+                $(ref).css("background-color", "white");
+            }
+        );
+    });
 
-$(document).ready(function () {
-    $("#bRes").hover(
-        function () {
-            $("#bRes").css("background-color", "#FFD700");
-        },
-        function () {
-            $("#bRes").css("background-color", "white");
-        }
-    );
-});
-
-$(document).ready(function () {
-    $("#bProject").hover(
-        function () {
-            $("#bProject").css("background-color", "#FFD700");
-        },
-        function () {
-            $("#bProject").css("background-color", "white");
-        }
-    );
-});
-
-$(document).ready(function () {
-    $("#bContact").hover(
-        function () {
-            $("#bContact").css("background-color", "#FFD700");
-        },
-        function () {
-            $("#bContact").css("background-color", "white");
-        }
-    );
-});
-
-$(document).ready(function () {
-    $("#bMore").hover(
-        function () {
-            $("#bMore").css("background-color", "#FFD700");
-        },
-        function () {
-            $("#bMore").css("background-color", "white");
-        }
-    );
+    $("#bHome").click();
 });
 
 $(window).scroll(function (event) {
